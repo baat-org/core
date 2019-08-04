@@ -1,11 +1,22 @@
-# Ignore Gradle project-specific cache directory
-.gradle
+# root project files
+.classpath
+.project
+.settings/
+*.iml
+**/.idea
 
-# Ignore Gradle build output directory
-build
+# maven and java
+target/
+bin/
+tmp/
+logs/
+*.class
+*.versionsBackup
 
+# osx
 .DS_Store
 
-.iml
-.idea
-
+# Gradle
+.gradle/
+build/
+out/
