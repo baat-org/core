@@ -7,8 +7,14 @@ repositories {
     jcenter()
 }
 
+ext {
+    springBootVersion = '2.0.5.RELEASE'
+    commonsLang3Version = '3.4'
+    junitVersion = '4.12'
+}
+
 dependencies {
-    testImplementation 'junit:junit:4.12'
+    testImplementation "junit:junit:${project.junitVersion}"
 }
 
 publishing {
