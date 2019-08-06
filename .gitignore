@@ -1,22 +1,27 @@
-# root project files
-.classpath
-.project
-.settings/
-*.iml
-**/.idea
-
-# maven and java
-target/
-bin/
-tmp/
-logs/
+# Compiled class file
 *.class
-*.versionsBackup
 
-# osx
-.DS_Store
+# Log file
+*.log
 
-# Gradle
-.gradle/
-build/
-out/
+# BlueJ files
+*.ctxt
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+.idea/
+target/
+*.iml
+
+*.pem
