@@ -1,5 +1,6 @@
 plugins {
     id 'java-library'
+    id 'maven-publish'
 }
 
 repositories {
@@ -8,4 +9,16 @@ repositories {
 
 dependencies {
     testImplementation 'junit:junit:4.12'
+}
+
+publishing {
+    publications {
+        myLibrary(MavenPublication) {
+            groupId = 'org.baat'
+            artifactId = 'core'
+            version = '1.0'
+
+            from components.java
+        }
+    }
 }
