@@ -8,7 +8,7 @@ repositories {
 }
 
 ext {
-    springBootVersion = '2.0.5.RELEASE'
+    springBootVersion = '2.4.0'
     commonsLang3Version = '3.4'
     junitVersion = '4.12'
 }
@@ -28,3 +28,6 @@ publishing {
         }
     }
 }
+
+sourceCompatibility = 1.15
+targetCompatibility = 1.15
