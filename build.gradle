@@ -3,18 +3,21 @@ plugins {
     id 'maven-publish'
 }
 
-repositories {
-    jcenter()
-}
+sourceCompatibility = 1.15
+targetCompatibility = 1.15
 
 ext {
-    springBootVersion = '2.4.0'
+    springBootVersion = '2.5.2'
     commonsLang3Version = '3.4'
     junitVersion = '4.12'
 }
 
 dependencies {
     testImplementation "junit:junit:${project.junitVersion}"
+}
+
+test {
+    useJUnitPlatform()
 }
 
 publishing {
@@ -28,6 +31,3 @@ publishing {
         }
     }
 }
-
-sourceCompatibility = 1.15
-targetCompatibility = 1.15
