@@ -1,7 +1,7 @@
 # core
 Core Shared Library
 
-
+## Build and Publish to Local Maven Repository
 ```
-./gradlew clean build publishToMavenLocal
+./rebuildAndPublishLocal.sh
 ```
