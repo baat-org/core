@@ -1,9 +1,17 @@
 package org.baat.core.transfer.user;
 
+import javax.validation.constraints.NotBlank;
+
 public class SignupRequest {
+    @NotBlank
     private String email;
+
+    @NotBlank
     private String name;
+
     private String avatarUrl;
+
+    @NotBlank
     private String password;
 
     public SignupRequest() {

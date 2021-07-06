@@ -6,6 +6,11 @@ plugins {
 sourceCompatibility = 1.15
 targetCompatibility = 1.15
 
+repositories {
+    mavenCentral()
+    mavenLocal()
+}
+
 ext {
     springBootVersion = '2.5.2'
     commonsLang3Version = '3.4'
@@ -13,6 +18,7 @@ ext {
 }
 
 dependencies {
+    implementation "org.springframework.boot:spring-boot-starter-validation:${project.springBootVersion}"
     testImplementation "junit:junit:${project.junitVersion}"
 }
 
