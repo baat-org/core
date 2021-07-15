@@ -11,7 +11,7 @@ public class ReplyMessage {
     @Positive
     private Long senderUserId;
 
-    // TODO
+    @Positive
     private Long recipientChannelId;
 
     @NotBlank

@@ -1,39 +1,42 @@
 package org.baat.core.transfer.channel;
 
 
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Positive;
 import java.util.Objects;
 
 public class Direct {
 
+    @NotNull
     @Positive
-    private long firstUserId;
+    private Long firstUserId;
 
+    @NotNull
     @Positive
-    private long secondUserId;
+    private Long secondUserId;
 
 
     public Direct() {
     }
 
-    public Direct(long firstUserId, long secondUserId) {
+    public Direct(Long firstUserId, Long secondUserId) {
         this.firstUserId = firstUserId;
         this.secondUserId = secondUserId;
     }
 
-    public long getFirstUserId() {
+    public Long getFirstUserId() {
         return firstUserId;
     }
 
-    public void setFirstUserId(long firstUserId) {
+    public void setFirstUserId(Long firstUserId) {
         this.firstUserId = firstUserId;
     }
 
-    public long getSecondUserId() {
+    public Long getSecondUserId() {
         return secondUserId;
     }
 
-    public void setSecondUserId(long secondUserId) {
+    public void setSecondUserId(Long secondUserId) {
         this.secondUserId = secondUserId;
     }
 
@@ -42,7 +45,7 @@ public class Direct {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Direct direct = (Direct) o;
-        return firstUserId == direct.firstUserId && secondUserId == direct.secondUserId;
+        return Objects.equals(firstUserId, direct.firstUserId) && Objects.equals(secondUserId, direct.secondUserId);
     }
 
     @Override

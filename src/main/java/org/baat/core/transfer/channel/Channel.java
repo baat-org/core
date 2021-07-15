@@ -2,6 +2,7 @@ package org.baat.core.transfer.channel;
 
 
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Positive;
 import java.util.Objects;
 
@@ -15,12 +16,13 @@ public class Channel {
 
     private String description;
 
-    private boolean archived;
+    @NotNull
+    private Boolean archived;
 
     public Channel() {
     }
 
-    public Channel(Long id, String name, String description, boolean archived) {
+    public Channel(Long id, String name, String description, Boolean archived) {
         this.id = id;
         this.name = name;
         this.description = description;
@@ -43,14 +45,6 @@ public class Channel {
         this.name = name;
     }
 
-    public boolean isArchived() {
-        return archived;
-    }
-
-    public void setArchived(boolean archived) {
-        this.archived = archived;
-    }
-
     public String getDescription() {
         return description;
     }
@@ -59,12 +53,20 @@ public class Channel {
         this.description = description;
     }
 
+    public Boolean getArchived() {
+        return archived;
+    }
+
+    public void setArchived(Boolean archived) {
+        this.archived = archived;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Channel channel = (Channel) o;
-        return archived == channel.archived && Objects.equals(id, channel.id) && Objects.equals(name, channel.name) && Objects.equals(description, channel.description);
+        return Objects.equals(id, channel.id) && Objects.equals(name, channel.name) && Objects.equals(description, channel.description) && Objects.equals(archived, channel.archived);
     }
 
     @Override
